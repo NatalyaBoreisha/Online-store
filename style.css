@@ -42,11 +42,12 @@ header h1 {
 
 nav {
     margin-top: 10px;
+    display: flex;
 }
 
 .nav {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
 }
 
@@ -216,4 +217,8 @@ footer .logo {
     font-size: 18px;
     color: #888;
     display: none;
+}
+
+#sale-checkbox {
+    margin-left: 10px;
 }

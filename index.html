@@ -15,7 +15,7 @@
 <body>
     <header>
         <h1>Интернет магазин посуды:ArtPosuda</h1>
-        <nav>
+        <nav class="container">
             <ul class="container nav">
                 <li>
                     <a href="#" class="logo">ArtPosuda</a>
@@ -29,13 +29,11 @@
                 <li>
                     <a href="#contacts">Контакты</a>
                 </li>
-                <li>
-                    <div class="site-search">
-                        <input type="search" id="search-input">
-                        <button type="button" id="search-btn" class="fa fa-search"></i>
-                    </div>
-                </li>
             </ul>
+            <div class="site-search">
+                <input type="search" id="search-input">
+                <button type="button" id="search-btn" class="fa fa-search"></i>
+            </div>
         </nav>
     </header>
     <main class="container">
@@ -48,6 +46,8 @@
                     <option value="cheap">Сначала дешевые</option>
                     <option value="rating">Рейтинг</option>
                 </select>
+                <input type="checkbox" id="sale-checkbox" style="margin-left: 10px;">
+                <label for="sale-checkbox">SALE</label>
             </div>
         </div>
         <section id="shop-items">

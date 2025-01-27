@@ -102,6 +102,7 @@ let currentState = [...items];
 const itemsContainer = document.querySelector("#shop-items");
 const itemTemplate = document.querySelector("#item-template");
 const nothingFound = document.querySelector("#nothing-found");
+const saleCheckbox = document.querySelector("#sale-checkbox");
 
 function renderItems(arr) {
   itemsContainer.innerHTML = "";
@@ -158,15 +159,6 @@ function prepareShopItem(shopItem) {
 const searchInput = document.querySelector("#search-input");
 const searchButton = document.querySelector("#search-btn");
 
-const saleCheckbox = document.createElement("input");
-saleCheckbox.type = "checkbox";
-saleCheckbox.id = "sale-checkbox";
-saleCheckbox.style.marginLeft = "10px";
-const saleLabel = document.createElement("label");
-saleLabel.htmlFor = "sale-checkbox";
-saleLabel.textContent = "SALE";
-document.querySelector(".filters-sort").append(saleCheckbox, saleLabel);
-
 function applySearch() {
   const searchString = searchInput.value.trim().toLowerCase();
   currentState = items.filter((el) =>
@@ -175,6 +167,7 @@ function applySearch() {
   if (saleCheckbox.checked) {
     currentState = currentState.filter((item) => item.tags.includes("sale"));
   }
+  sortControl.selectedIndex = 0;
   renderItems(currentState);
 }
 
